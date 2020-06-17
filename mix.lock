@@ -12,6 +12,7 @@
   "goldrush": {:git, "https://github.com/basho/goldrush.git", "8f1b715d36b650ec1e1f5612c00e28af6ab0de82", [tag: "0.1.9"]},
   "hut": {:hex, :hut, "1.2.1", "08d46679523043424870723923971889e8a34d63b2f946a35b46cf921d1236e7", [:"erlang.mk", :rebar, :rebar3], [], "hexpm", "953fc447514baf9cc79fa147d66469243c94dfa1593779614e070c692d0bf0f3"},
   "lager": {:git, "https://github.com/basho/lager.git", "81eaef0ce98fdbf64ab95665e3bc2ec4b24c7dac", [tag: "3.2.4"]},
+  "lager_logger": {:hex, :lager_logger, "1.0.5", "2b58be52fe1e0fb82656180fc54e45618aa2dc619090b00e6d3fb4707c6a1fe5", [:mix], [{:lager, ">= 2.1.0", [hex: :lager, repo: "hexpm", optional: false]}], "hexpm", "e1b166bcd39ce9e32378d16b8bc0d78cee6e9d9de8488900e12e9168998e49a0"},
   "neotoma": {:git, "https://github.com/basho/neotoma.git", "9e57d8ebd4ebb02c3e2428b08f3a01e2ff834ce2", [tag: "1.7.4"]},
   "parse_trans": {:hex, :parse_trans, "3.3.0", "09765507a3c7590a784615cfd421d101aec25098d50b89d7aa1d66646bc571c1", [:rebar3], [], "hexpm", "17ef63abde837ad30680ea7f857dd9e7ced9476cdd7b0394432af4bfc241b960"},
   "pbkdf2": {:git, "git://github.com/basho/erlang-pbkdf2.git", "681494c3ea03625c909a16b1b3ca295edf892057", [branch: "develop-3.0"]},

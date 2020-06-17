@@ -14,7 +14,7 @@ defmodule Ketchup.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:lager, :logger],
       mod: {Ketchup.Application, []}
     ]
   end
@@ -22,6 +22,7 @@ defmodule Ketchup.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:lager_logger, "~> 1.0"},
       {:riak_core, github: "basho/riak_core", branch: "develop-3.0-travisci"},
       {:cuttlefish, github: "basho/cuttlefish", tag: "2.0.11", manager: :rebar3, override: true},
       {:lager, ~r/.*/, github: "basho/lager", tag: "3.2.4", manager: :rebar3, override: true},
