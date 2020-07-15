@@ -23,6 +23,7 @@ erl_crash.dump
 ketchup-*.tar
 
 #riak core local git ignores
-data/
-log/
-ring_state_dir/
+data*
+log*
+ring_state_dir*
+platform_dir*

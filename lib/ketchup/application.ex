@@ -6,9 +6,15 @@ defmodule Ketchup.Application do
   use Application
 
   def start(_type, _args) do
+    topologies = [
+      example: [
+        strategy: Cluster.Strategy.Gossip,
+      ]
+    ]
     :ok = :riak_core.register([{:vnode_module, Ketchup.Vnode}])
     :ok = :riak_core_node_watcher.service_up(Ketchup.Service, self)
     children = [
+      {Cluster.Supervisor, [topologies, [name: MyApp.ClusterSupervisor]]},
       %{id: Ketchup.VnodeMasterWorker, start: {:riak_core_vnode_master, :start_link, [Ketchup.Vnode]} }
       # Starts a worker by calling: Ketchup.Worker.start_link(arg)
       # {Ketchup.Worker, arg}
